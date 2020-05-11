@@ -1,44 +1,23 @@
-<?php
+<!DOCTYPE html>
+<html>
 
-$Category =[];
-$Category[] = 'child';
-$Category[] = 'teenager';
-$Category[] = 'adult';
-$Category[] = 'senior';
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Inscription sheet
+        </title>
+        <meta name ="author" content="">
+        <meta name = "description" content="">
+        <meta name = "viewport" content="width=device-width, initial-scale=1">
+    </head>
 
-print_r($Category);
+    <body>
+        <p>Sheet for iscription of competitors</p>
+        <form action="script.php" method="POST">
+            <p>Your name: <input type="text" name="name" /></p>
+            <p>Your age: <input type="text" name="age"/></p>
+            <p><input type="submit" value="Send competitor's data"/></p>
+        </form>
+    </body>
 
-$name = 'Ed';
-$age = 19;
-
-var_dump($name);
-var_dump($age);
-
-if($age >= 6 && $age <= 12)
-{
-    echo 'child';
-    for($i = 0; $i<count($Category); $i++)
-    {
-        if($Category[$i] == 'child')
-            echo "the swimmer ",$name," competes in the ",$Category[$i]," category";
-    }
-}
-else if($age >=13 && $age <=18)
-{
-    echo 'teenager';
-    for($i = 0; $i<count($Category); $i++)
-    {
-        if($Category[$i] == 'teenager')
-            echo "the swimmer ",$name," competes in the ",$Category[$i]," category";
-    }
-}
-else
-{
-    echo 'adult';
-    for($i = 0; $i<count($Category); $i++)
-    {
-        if($Category[$i] == 'adult')
-            echo "the swimmer ",$name," competes in the ",$Category[$i]," category";
-    }
-}
-?>
+</html>
