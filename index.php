@@ -1,5 +1,8 @@
 <?php
     session_start();
+    include "services/validationService.php";
+    include "services/sessionMessanges.php";
+    include "services/categoryChecker.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,13 +21,13 @@
         <p>Sheet for subscription of competitors</p>
         <form action="script.php" method="POST">
             <?php
-                $errorMessage = isset($_SESSION['error-message'])?$_SESSION['error-message']:'';
+                $errorMessage = getErrorMessage();
                 if(!empty($errorMessage))
                 {
                     echo $errorMessage;
                 }
 
-                $successmessage = isset($_SESSION['success-message'])?$_SESSION['success-message']:'';
+                $successmessage = getSuccessMessage();
                 if(!empty($successmessage))
                 {
                     echo $successmessage;
